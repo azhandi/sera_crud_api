@@ -1,5 +1,5 @@
 # PT Serasi Autoraya Coding Test
-**Disclaimer: this is a test branch to test converting codebase to typescript. Changes with the help of AI.**
+This project is a coding test for PT Serasi Autoraya, implemented with Node.js and ExpressJS.
 
 ## Project Setup
 Follow these steps to set up the project on your local machine: 
@@ -15,4 +15,4 @@ Follow these steps to set up the project on your local machine:
 API documentation is available via Swagger. You can access it at: `` http://localhost:<PORT>/api-docs `` Replace `<PORT>` with the configured port from your `.env` file.
 
 ## Dependencies
-This project uses the following dependencies: - Express.js - Sequelize - Swagger-jsdoc - Swagger-ui-express - dotenv - Mocha - nyc
+This project uses the following dependencies: - Express.js - Sequelize - Swagger-jsdoc - Swagger-ui-express - dotenv - Mocha - nyc - Typescript
