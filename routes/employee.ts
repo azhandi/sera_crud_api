@@ -1,7 +1,7 @@
-const express = require('express')
-const employeeContoller = require('../controllers/employee')
+import express, { Request, Response, Router } from 'express'
+import {createEmployee, getAllEmployee, updateEmployee, deleteEmployee} from '../controllers/employee'
 
-const router = express.Router()
+const router: Router = express.Router()
 
 /**
  * @swagger
@@ -49,7 +49,7 @@ const router = express.Router()
  *       400:
  *         description: Invalid input
  */
-router.post('/create', employeeContoller.createEmployee)
+router.post('/create', (req: Request, res: Response) => createEmployee(req, res))
 
 /**
  * @swagger
@@ -79,7 +79,7 @@ router.post('/create', employeeContoller.createEmployee)
  *       500:
  *         description: Internal server error
  */
-router.get('/all', employeeContoller.getAllEmployee)
+router.get('/all', (req: Request, res: Response) => getAllEmployee(req, res))
 
 /**
  * @swagger
@@ -99,7 +99,7 @@ router.get('/all', employeeContoller.getAllEmployee)
  *       400:
  *         description: Invalid input
  */
-router.put('/update', employeeContoller.updateEmployee)
+router.put('/update', (req: Request, res: Response) => updateEmployee(req, res))
 
 /**
  * @swagger
@@ -120,6 +120,6 @@ router.put('/update', employeeContoller.updateEmployee)
  *       400:
  *         description: Invalid input
  */
-router.delete('/delete/:id', employeeContoller.deleteEmployee)
+router.delete('/delete/:id', (req: Request, res: Response) => deleteEmployee(req, res))
 
-module.exports = router
+export default router
