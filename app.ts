@@ -5,8 +5,7 @@ import swaggerJsDoc from 'swagger-jsdoc'
 import swaggerUi from 'swagger-ui-express'
 
 const app = express()
-const isSwagger: boolean = process.env.IS_SWAGGER === '1'
-const PORT: string | number = isSwagger ? process.env.SWAGGER_PORT || 3001 : process.env.PORT || 3000
+const PORT: string | number = process.env.PORT || 3000
 
 app.use(bodyParser.json())
 
