@@ -1,5 +1,4 @@
 # PT Serasi Autoraya Coding Test
-This project is a coding test for PT Serasi Autoraya, implemented with Node.js and ExpressJS.
 **Disclaimer: this is a test branch to test converting codebase to typescript. Changes with the help of AI.**
 
 ## Project Setup
