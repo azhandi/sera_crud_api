@@ -5,8 +5,7 @@ const swaggerJsDoc = require('swagger-jsdoc')
 const swaggerUi = require('swagger-ui-express')
 
 const app = express()
-const is_swagger = process.env.IS_SWAGGER === '1'
-const PORT = is_swagger ? process.env.SWAGGER_PORT || 3001 : process.env.PORT || 3000
+const PORT = process.env.PORT || 3000
 
 app.use(bodyParser.json())
 
