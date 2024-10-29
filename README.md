@@ -15,4 +15,4 @@ Follow these steps to set up the project on your local machine:
 API documentation is available via Swagger. You can access it at: `` http://localhost:<PORT>/api-docs `` Replace `<PORT>` with the configured port from your `.env` file.
 
 ## Dependencies
-This project uses the following dependencies: - Express.js - Sequelize - Swagger-jsdoc - Swagger-ui-express - dotenv - Mocha - nyc
+This project uses the following dependencies: - Express.js - Sequelize - Swagger-jsdoc - Swagger-ui-express - dotenv - Mocha - nyc - Typescript

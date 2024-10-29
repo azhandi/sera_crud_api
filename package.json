@@ -2,12 +2,12 @@
   "name": "ebconnection_test",
   "version": "1.0.0",
   "description": "",
-  "main": "index.js",
+  "main": "index.ts",
   "scripts": {
-    "test": "mocha",
-    "coverage": "nyc mocha",
-    "start": "node app.js",
-    "dev": "nodemon app.js"
+    "test": "mocha -r ts-node/register test/**/*.test.ts",
+    "coverage": "nyc mocha -r ts-node/register test/**/*.test.ts",
+    "start": "ts-node app.ts",
+    "dev": "nodemon app.ts"
   },
   "keywords": [],
   "author": "",
@@ -23,8 +23,17 @@
     "swagger-ui-express": "^5.0.1"
   },
   "devDependencies": {
+    "@types/body-parser": "^1.19.5",
+    "@types/express": "^5.0.0",
+    "@types/mocha": "^10.0.9",
+    "@types/node": "^22.8.2",
+    "@types/sequelize": "^4.28.20",
+    "@types/swagger-jsdoc": "^6.0.4",
+    "@types/swagger-ui-express": "^4.1.6",
     "mocha": "^10.7.3",
     "nyc": "^17.1.0",
-    "sequelize-cli": "^6.6.2"
+    "sequelize-cli": "^6.6.2",
+    "ts-node": "^10.9.2",
+    "typescript": "^5.6.3"
   }
 }

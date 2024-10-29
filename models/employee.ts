@@ -1,7 +1,21 @@
-const { DataTypes } = require('sequelize')
+import { DataTypes, Model, Optional, Sequelize } from 'sequelize'
 
-module.exports = (sequelize) => {
-  const Employee = sequelize.define('Employee', {
+interface EmployeeAttributes {
+  emp_id: number
+  emp_name: string
+  emp_email: string
+  emp_status: 'active' | 'inactive'
+  emp_joined_date: Date
+}
+
+export type EmployeeCreationAttributes = Optional<EmployeeAttributes, 'emp_id'>
+
+export interface EmployeeInstance extends Model<EmployeeAttributes, EmployeeCreationAttributes>, EmployeeAttributes {
+ // do nothing
+}
+
+export const EmployeeFactory = (sequelize: Sequelize) => {
+  const Employee = sequelize.define<EmployeeInstance>('Employee', {
     emp_id: {
       type: DataTypes.INTEGER,
       primaryKey: true,
