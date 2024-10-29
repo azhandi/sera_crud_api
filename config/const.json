@@ -1,0 +1,7 @@
+{
+    "emp_active": "active",
+    "emp_inactive": "inactive",
+    "emp_status": ["active", "inactive"],
+    "default_err_code": "#999",
+    "default_err_message": "An unexpected error occurred"
+}
